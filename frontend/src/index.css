@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.font {
+  font-family: monospace;
+}
+
+/* Background modal */
+.Modal {
+  position: fixed; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5); 
+  z-index: 1050;
+  margin: 0;
+  padding: 0;
+}
+
+/* Front modal */
+.modals{
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  height: 740px;
+  font-size: 19px;
+  background-color: rgb(224, 223, 223);
+}
+
+/* modal close button */
+.CloseButton{
+  float: right;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  font-family: 'verdana';
+}
+
+/* button for shoping */
+.ShopButton button{
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+/* head product page */
+.head{
+  background-image: url(./svg/BG.svg);
+  height: 450px;
+  background-position: center;
+}
+
+/* favicon */
+.Favicon{
+  background-image: url(./svg/Favicon.svg);
+}
+
+
+/* navbar */
+.navbarBg{
+  background-color: rgba(0, 0, 0, 0.401);
+  font-size: 20px;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+}
+.embla__slide {
+  flex: 0 0 100%;
+}
+
+.emblaStyle button{
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.emblaStyle img{
+  max-height: 500px;
+  max-width: 440px;
+  padding: 0;
+  margin: 0;
+}
+
+.avatar{
+  border-style: solid;
+  border: 0;
+  border-radius: 100%;
+}
+
+.VkButton {
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+}
+
+.pleft{
+  padding-left: 20px;
+}
