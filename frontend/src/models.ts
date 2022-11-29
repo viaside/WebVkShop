@@ -1,5 +1,3 @@
-
-
 // Product interface
 export interface IProduct {
     id: number

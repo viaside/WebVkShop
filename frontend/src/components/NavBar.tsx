@@ -3,11 +3,15 @@ import { Navbar, NavbarBrand, NavItem, NavLink } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { getCookie, removeCookie } from 'typescript-cookie';
 
+
+// navbar element
 export function NavBar(){
+    // redirect to vk authorize
     function loginHandler(){
         window.location.href = "https://oauth.vk.com/authorize?client_id=51483485&display=page&redirect_uri=http://localhost:3000&response_type=code&v=5.131";
     }
 
+    // log out func "clear cookie"
     async function logoutHandler(){
         removeCookie("islogin");
         removeCookie('image');
@@ -15,16 +19,16 @@ export function NavBar(){
         window.location.reload();
     }
 
+    // vk item
     const NavVk = (
         function(){
             if (getCookie("islogin") === "true") {
                 return ( 
                     <>
-                        <NavLink tag={Link} to="/"><img className='avatar' height={50} width={50} src={ getCookie("image")} alt="" /></NavLink>
-                        <button className='VkButton' onClick={ logoutHandler }>Выйти</button>
+                    <NavLink tag={Link} to="/"><img className='avatar' height={50} width={50} src={ getCookie("image")} alt="" /></NavLink>
+                    <button className='VkButton' onClick={ logoutHandler }>Выйти</button>
                     </>
                 )
-
             } else{
                 return <button className='VkButton' onClick={ loginHandler }>Войти с помощью Vk</button>
             }
@@ -33,7 +37,6 @@ export function NavBar(){
 
     return (
     <>                      
-        <header>
             <Navbar className="navbar-expand-lg fixed-top navbarBg font" container light>
                 <NavbarBrand tag={Link} to="/" className="text-white"><svg className='Favicon' width={100} height={100}/></NavbarBrand>
                 <div className="flex-grow-1">
@@ -67,7 +70,6 @@ export function NavBar(){
                     </ul>
                 </div>  
             </Navbar>
-        </header>
         </>
         )
 }

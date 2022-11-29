@@ -5,6 +5,8 @@ import { getCookie, setCookie} from 'typescript-cookie'
 
 
 class App extends Component{
+  
+  //work with nodejs and auth user via vk
   async componentDidMount() {
     if(getCookie("islogin") === "true") {
       console.log("auth")

@@ -35,9 +35,9 @@ export function InfoProduct({onCheck, id}: CheckInfoProductProps){
             <div className="embla align-middle" >
                     <div className="embla__viewport" ref={emblaRef}>
                         <div className="embla__container">
-                            <div className="embla__slide"><img src={ products[id].imageMain } alt="1" /></div>
-                            <div className="embla__slide"><img src={ products[id].imageSecond } alt="2" /></div>
-                            <div className="embla__slide"><img src={ products[id].imageThird } alt="3" /></div>
+                            <div className="embla__slide"><img className="imgProduct" src={ products[id].imageSecond } alt="2" /></div>
+                            <div className="embla__slide"><img className="imgProduct" src={ products[id].imageThird } alt="3" /></div>
+                            <div className="embla__slide"><img className="imgProductMain" src={ products[id].imageMain } alt="1" /></div>
                         </div>
                     </div>
             </div>

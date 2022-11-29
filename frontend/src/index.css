@@ -12,6 +12,7 @@ code {
     monospace;
 }
 
+/* global font */
 .font {
   font-family: monospace;
 }
@@ -48,10 +49,16 @@ code {
   font-family: 'verdana';
 }
 
+.ShopButton{
+  text-align: center;
+}
+
 /* button for shoping */
 .ShopButton button{
-  margin-right: 5px;
-  border-radius: 10px;
+  border: 0;
+  border-bottom: 2px solid rgb(90, 87, 87);
+  background-color: rgba(255, 255, 255, 0);
+  margin: 5px;
 }
 
 /* head product page */
@@ -73,6 +80,7 @@ code {
   font-size: 20px;
 }
 
+/* image swap */
 .embla {
   overflow: hidden;
 }
@@ -91,24 +99,78 @@ code {
 }
 
 .emblaStyle img{
-  max-height: 500px;
   max-width: 440px;
   padding: 0;
   margin: 0;
 }
 
+/* image product */
+.imgProduct{
+  height: 500px;
+}
+.imgProductMain{
+  height: 250px;
+}
+
+/* product container */
+.containerProduct{
+  margin: 0px 200px 0 200px;
+  justify-content: center;
+}
+
+/* vk avatar */
 .avatar{
   border-style: solid;
   border: 0;
   border-radius: 100%;
 }
 
+/* vk button */
 .VkButton {
   border: 0;
+  border-bottom: 2px solid rgb(180, 179, 179);
   background-color: rgba(255, 255, 255, 0);
   color: white;
 }
 
 .pleft{
   padding-left: 20px;
+}
+
+/* basket page */
+.basket{
+  margin-top: 150px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.basket h1{
+  font-weight: bold;
+}
+
+.basket button{
+  float: right;
+  margin: 20px;
+}
+
+.basketItems{
+  display: flex;
+  padding: 20px;
+}
+
+.basketItems p{
+  margin: 20px;
+}
+
+.basketItems div{
+  padding-left: 25px;
+}
+
+.basketItems button{
+  border: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.price{
+  margin-left: 600px;
 }
