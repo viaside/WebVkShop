@@ -8,6 +8,7 @@ let code;
 let userdata;
 let loginCheck = false; 
 
+// vk api fetchm and get user info 
 async function GetUserId(){
     const resp = await fetch("https://oauth.vk.com/access_token?client_id=51483485&client_secret=zjSJd9ppqeeAs1XjbKyQ&redirect_uri=http://localhost:3000&code=" + code);
     const data = await resp.json();
@@ -21,9 +22,11 @@ async function GetUserId(){
     }
 }
 
-
+// use cors policy
 app.use(cors());
 
+
+// return user info ["id"]["first_name"]["last_name"]["crop_image"]
 app.get('/login', async function (req, res) {
     code = (req.url).substring(12);
     if(code.length == 18){
