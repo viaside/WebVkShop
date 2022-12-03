@@ -150,27 +150,21 @@ code {
 
 .basket button{
   float: right;
-  margin: 20px;
 }
 
 .basketItems{
   display: flex;
-  padding: 20px;
+  justify-content: space-between;
 }
 
-.basketItems p{
-  margin: 20px;
-}
-
-.basketItems div{
-  padding-left: 25px;
-}
-
-.basketItems button{
+.ButtonValue{
   border: 0;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0, 0, 0, 0);
+  height: 0;
 }
 
-.price{
-  margin-left: 600px;
+.ButtonEvent{
+  border: 0;
+  border-bottom: 2px solid rgb(180, 179, 179);
+  background-color: rgba(255, 255, 255, 0);
 }

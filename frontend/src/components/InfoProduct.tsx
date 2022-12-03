@@ -1,7 +1,8 @@
-import React, { useCallback } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { products } from "../data/products";
+import React, { useCallback } from "react"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { products } from "../data/products"
 import useEmblaCarousel from 'embla-carousel-react'
+import { getCookie, setCookie} from 'typescript-cookie'
 
 
 // get id and close event
@@ -10,12 +11,18 @@ interface CheckInfoProductProps {
     id: number
 }
 
-
 //Create template modal
 export function InfoProduct({onCheck, id}: CheckInfoProductProps){
     const closeHandler = (event: React.MouseEvent) => {
-        event.preventDefault()
-        onCheck()
+        event.preventDefault();
+        onCheck();
+        if (getCookie("ProductId") !== undefined){
+            setCookie("ProductId", getCookie("ProductId") + (id).toString());
+            window.location.reload();
+        } else{
+            setCookie("ProductId" , id);
+            window.location.reload();
+        }
     }
 
     const [emblaRef, emblaApi] = useEmblaCarousel()
