@@ -9,7 +9,7 @@ class App extends Component{
   //work with nodejs and auth user via vk
   async componentDidMount() {
     if(getCookie("islogin") === "true") {
-      console.log("auth")
+      console.log("auth");
     } else{
       setCookie('islogin', false);
       let code = (window.location.href).substring(28);

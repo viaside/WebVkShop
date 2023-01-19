@@ -1,6 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Product } from "../components/Product";
 import { products } from "../data/products";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Product page
 export function ProductPage(){
@@ -8,7 +8,7 @@ export function ProductPage(){
         <>
         <div className="head"/>
         <div className="d-flex flex-row flex-wrap containerProduct">
-            { products.map(product => <Product product={product} key={product.id}/>) }
+            { products.map(product => <Product  product={product} key={product.id}/>) }
         </div>        
         </>
     )

@@ -16,6 +16,7 @@ export function NavBar(){
         removeCookie("islogin");
         removeCookie('image');
         removeCookie('id');
+        removeCookie('ProductId');
         window.location.reload();
     }
 

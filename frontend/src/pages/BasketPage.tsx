@@ -1,47 +1,60 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BasketProduct } from '../components/BasketProduct';
-import { Component, ReactNode } from 'react'
-import { getCookie } from 'typescript-cookie';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { getCookie } from 'typescript-cookie'
+import { BasketProduct } from '../components/BasketProduct'
 
+// Basket page
+export function BasketPage(){
+    let userId = NaN;
+    let basketProducts = JSON.parse(localStorage.getItem("Basket") || "{}");
 
-export class BasketPage extends Component {
-    
-    BasketProducts = (
-        function(){
-            const ProductId: string[] = [];
-            for(var i = 0; i <= ("" + getCookie("ProductId")).length-1; i++){
-                ProductId.push(("" + getCookie("ProductId"))[i]);
+    function BasketInfo(){
+        let ProductId: number[] = [];
+        let sum = 0;
+
+        if(basketProducts.length !== 0 && basketProducts.length !== undefined){
+            // adding product IDs from an object
+            for (let i = 0; i < basketProducts.length; i++) {
+                ProductId.push(basketProducts[i].id);            
+            };
+
+            // calculates the sum of all products
+            for (let i = 0; i < basketProducts.length; i++) {
+                sum += basketProducts[i].count * basketProducts[i].price;
             }
-            console.log(getCookie("ProductId"));
-            if (getCookie("ProductId") === ""){
-                return (
-                    <>
-                    <p className='text-center p-5'>Корзина пуста</p>
-                    </>
-                )
-            } else{
-                return ( 
-                    <>
-                    {ProductId.map(ProductId => 
-                        <BasketProduct id={Number(ProductId)} key={ Number(ProductId)}/>
-                    )}
-                    </>
-                )
-            }
-        }
-    );
-    
-    render(): ReactNode {
-        return (
-            <> 
-            <div className='basket container'>
-                <h1>Корзина</h1>
+
+            // Returning cart product cards
+            return (
+                <>
+                {ProductId.map(ProductId => 
+                    <BasketProduct id = { ProductId } key = { ProductId } />
+                )} 
                 <hr/>
-                <this.BasketProducts/>
-                <hr/>
+                <h1 className='text-end'>Сумма: {sum} </h1>
                 <button className='ButtonEvent'>Заказать</button>
-            </div>
-            </>
-        )
+                </>
+            );
+        } else{
+            let auth = getCookie("id");
+            let message = auth? "Корзина пуста" : "Войдите с помощью vk";
+
+            return (
+                <>
+                <div className='text-center'>
+                    <h4 className='p-5'>{message}</h4>
+                </div>
+                <hr />
+                </>
+            )
         }
+    }
+    
+    return (
+        <div className='basket container'>
+            <h1>Корзина</h1>
+            <hr/>
+            <div>
+                <BasketInfo/>
+            </div>
+        </div>
+    )
 }

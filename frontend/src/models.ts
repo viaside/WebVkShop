@@ -9,3 +9,16 @@ export interface IProduct {
     imageSecond: string
     imageThird: string
 }
+
+//Product info for basket
+export interface IProductInfo {
+    id: number
+    price: number
+    count: number
+}
+
+// Basket product interface
+export interface IBasketProduct {
+    userId: number
+    productInfo: IProductInfo[]
+}
