@@ -8,4 +8,5 @@
 ## Product pages
 <img src="main.gif"/>
 <hr/>
+## info product and basket pages
 <img src="second.gif"/>
