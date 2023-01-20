@@ -5,6 +5,6 @@
 - 🛒 Add item to cart;
 - 🧮 Get the sum of all items in the cart;
 - 🛍️ change in the quantity of products;
-Product pages
+## Product pages
 <img src="main.gif"/>
 <hr/>
