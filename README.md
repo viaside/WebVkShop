@@ -6,6 +6,9 @@
 - 🧮 Get the sum of all items in the cart;
 - 🛍️ change in the quantity of products;
 ## Product pages
+
 <img src="main.gif"/>
+
 ## Info product and basket pages
+
 <img src="second.gif"/>
