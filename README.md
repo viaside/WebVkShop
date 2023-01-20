@@ -8,3 +8,4 @@
 ## Product pages
 <img src="main.gif"/>
 <hr/>
+<img src="second.gif"/>
