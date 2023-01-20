@@ -7,6 +7,5 @@
 - 🛍️ change in the quantity of products;
 ## Product pages
 <img src="main.gif"/>
-<hr/>
 ## Info product and basket pages
 <img src="second.gif"/>
